@@ -1,0 +1,30 @@
+{
+  "name": "kenm",
+  "version": "0.0.1",
+  "description": "KenM slackbot",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shampine/kenm.git"
+  },
+  "keywords": [
+    "kenm",
+    "slack",
+    "slackbot",
+    "bot"
+  ],
+  "author": "Patrick Shampine <patrick@patrickshampine.com> (https://patrickshampine.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shampine/kenm/issues"
+  },
+  "homepage": "https://github.com/shampine/kenm#readme",
+  "dependencies": {
+    "slackbots": "^0.5.1",
+    "sqlite": "0.0.4"
+  }
+}
