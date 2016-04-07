@@ -1,4 +1,4 @@
-# kenm
+# KenM
 
 "If we don't study the mistakes of the future we're doomed to repeat them for the first time." - KenM
 
