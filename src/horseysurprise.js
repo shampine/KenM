@@ -46,5 +46,8 @@ module.exports = class HorseySurprise {
     console.log(data);
   }
 
+  meMessage(data) {
+    
+  }
 
 }
