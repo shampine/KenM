@@ -4,25 +4,33 @@
 
 ## installation
 
+Create a bot to generate a token and other settings.
+
+`https://<team-name>.slack.com/apps/build/custom-integration`
+
+Copy `config.sample.js` to `config.js` and enter values.
+
+Finally install all dependencies `npm install`.
+
 ## usage
+
+`npm start`
+
+## requirements
+
+Requires Node (stable) and npm.
 
 ## todo
 
-List of potential feature sets:  
-
-- KenM quote random quote generator  
-- KenM twitter <random> <latest>  
-- KenM screenshot <random> <latest>  
-
-
-## tutorials
-
-### node
-https://scotch.io/tutorials/building-a-slack-bot-with-node-js-and-chuck-norris-super-powers  
-https://www.npmjs.com/package/slackbots  
-
-### reddit
-https://github.com/reddit/reddit/wiki/API-Wrappers  
+- ~~integrate with slack~~  
+- ~~integrate sqlite~~  
+- ~~create initial tables~~  
+- database should trash and resetup if flagged  
+- create quotes migration  
+- create twitter integration  
+- create reddit integration  
+- text parsing from chat  
+- random quote response method  
 
 ## license
 
