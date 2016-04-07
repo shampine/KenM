@@ -7,8 +7,11 @@
 'use strict';
 
 const config = {
-  name: "",
-  token: ""
+  name     : "",
+  token    : "",
+  database : {
+    setup : true
+  }
 };
 
 module.exports = config;
