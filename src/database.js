@@ -18,22 +18,25 @@ const sqlite3 = require('sqlite3').verbose();
 module.exports = class Database {
 
   constructor() {
-    this.db = new sqlite3.Database(kenny);
+    if(exists) {
+      this.db = new sqlite3.Database(kenny);
+    } else {
+      throw "No database found. Flag as true.";
+    }
   }
 
   setup() {
-    this.db.serialize(function() {
+    if(!exists) {
+      this.db.serialize(function() {
 
-      this.db.run("CREATE TABLE quotes (id INT, quote TEXT)");
-      this.db.run("CREATE TABLE images (id INT, image TEXT)");
-      this.db.run("CREATE TABLE tweets (id INT, tweet TEXT)");
+        this.db.run("CREATE TABLE quotes (id INT, quote TEXT)");
+        this.db.run("CREATE TABLE images (id INT, image TEXT)");
+        this.db.run("CREATE TABLE tweets (id INT, tweet TEXT)");
 
-    }.bind(this));
+      }.bind(this));
 
-    this.db.close();
+      this.db.close();
+    }
   }
 
 }
-
-
-
