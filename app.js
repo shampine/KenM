@@ -7,17 +7,15 @@
 "use strict";
 
 const config         = require('./config');
-const HorseySurprise = require('./src/horseysurprise');
 const Database       = require('./src/database');
+const HorseySurprise = require('./src/horseysurprise');
+const Logger		     = require('./src/logger');
+
+const database       = new Database();
+const logger         = new Logger(config);
 
 /**
- * Bootstrap Database
- *
- */
-const database = new Database();
-
-/**
- * Run the database
+ * Bootstrap the database
  *
  */
 if(config.database.setup === true) {
@@ -29,8 +27,9 @@ if(config.database.setup === true) {
  *
  */
 const horsey = new HorseySurprise({
-  name      : config.name,
-  token     : config.token,
+  config  	: config,
+  database  : database,
+  logger    : logger
 });
 
 /**
