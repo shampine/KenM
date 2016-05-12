@@ -9,7 +9,7 @@
 const config         = require('./config');
 const Database       = require('./src/database');
 const HorseySurprise = require('./src/horseysurprise');
-const Logger		     = require('./src/logger');
+const Logger         = require('./src/logger');
 
 const database       = new Database();
 const logger         = new Logger(config);
@@ -27,7 +27,7 @@ if(config.database.setup === true) {
  *
  */
 const horsey = new HorseySurprise({
-  config  	: config,
+  config    : config,
   database  : database,
   logger    : logger
 });
