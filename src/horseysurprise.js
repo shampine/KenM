@@ -95,7 +95,7 @@ module.exports = class HorseySurprise {
     }
 
     if(data.text.search(/quote/i) > -1) {
-      this.bot.postMessageToChannel('lobby', 'Hey there good looking.', function() {});
+      this.bot.postMessageToChannel('lobby', this.database.getRandomQuote(), function() {});
     }
   }
 
